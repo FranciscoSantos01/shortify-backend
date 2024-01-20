@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid'
     urlName:{
         type:String,
         required:true,
-        default:`random_user${nanoid(3)}`
+        default:()=>`random_user${nanoid(3)}`
     },
     fullUrl:{
         type:String,
@@ -14,7 +14,7 @@ import { nanoid } from 'nanoid'
     shortUrl:{
         type:String,
         required:true,
-        default:nanoid(8)
+        default:()=>nanoid(8)
     },
     disabled:{
         type:Boolean,
