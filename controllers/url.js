@@ -65,7 +65,7 @@ export const deleteUrl = async(req,res=response)=>{
                 msg:'There no url with that id'
             })
         }
-        await URL.findOneAndDelete(id)
+        await URL.findByIdAndDelete(id)
         res.status(200).json({
             ok:true,
             msg:'url deleted'
